@@ -39,7 +39,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   const handleSumit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    if (!title || !imdbId || !imdbUrl || !imgUrl || !description) {
+    if (!title || !imdbId || !imdbUrl || !imgUrl) {
       return;
     } else {
       const newMovie: Movie = { title, description, imgUrl, imdbUrl, imdbId };
@@ -66,7 +66,6 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         label="Description"
         value={description}
         onChange={handleDescription}
-        required
       />
 
       <TextField
